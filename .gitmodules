@@ -1,0 +1,6 @@
+[submodule "zsh/.oh-my-zsh/custom/plugins/zsh-aliases-exa"]
+	path = zsh/.oh-my-zsh/custom/plugins/zsh-aliases-exa
+	url = git@github.com:DarrinTisdale/zsh-aliases-exa.git
+[submodule "tmux/.tmux-power"]
+	path = tmux/.tmux-power
+	url = git@github.com:wfxr/tmux-power.git
