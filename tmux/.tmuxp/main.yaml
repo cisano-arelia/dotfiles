@@ -1,0 +1,30 @@
+session_name: main
+start_directory: '~'
+global_options:
+  default-shell: /usr/bin/zsh
+windows:
+- window_name: logging
+  layout: main-horizontal
+  options:
+    remain-on-exit: true
+    automatic-rename: on
+    main-pane-height: 25
+  panes:
+  - shell_command:
+    - journalctl -f
+    focus: true
+  - dmesg -w
+  window_index: 1
+- window_name: main
+  layout: main-horizontal
+  options:
+    remain-on-exit: true
+    automatic-rename: on
+    main-pane-height: 25
+  focus: true
+  panes:
+  - shell_command:
+    -
+    focus: true
+  - pane
+  window_index: 2
