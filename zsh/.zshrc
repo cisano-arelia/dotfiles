@@ -15,7 +15,7 @@ else
   zstyle ':omz:update' mode auto      # update automatically without asking
   zstyle ':omz:update' frequency 13
 
-  plugins=(common-aliases zsh-aliases-exa aliases alias-finder git)
+  plugins=(common-aliases aliases alias-finder git)
 
   source $ZSH/oh-my-zsh.sh
 fi
