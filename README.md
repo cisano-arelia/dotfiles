@@ -18,18 +18,18 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 
 ## Tmux preloading service systemd
 
-For: /etc/systemd/system/tmuxp.service
+For: /etc/systemd/system/tmuxp@.service
 ```
 [Unit]
 Description=tmuxp preload
 
 [Service]
 Type=forking
-User=cisa
-WorkingDirectory=/home/cisa
+User=peter
+WorkingDirectory=/home/peter
 Environment="DISABLE_AUTO_TITLE=true"
-ExecStart=/usr/bin/tmuxp load -d main
-ExecStop=/usr/bin/tmux kill-server
+ExecStart=/usr/bin/tmuxp load -d %i
+ExecStop=/usr/bin/tmux kill-session -t %i
 
 [Install]
 WantedBy=multi-user.target

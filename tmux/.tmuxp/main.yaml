@@ -3,28 +3,34 @@ start_directory: '~'
 global_options:
   default-shell: /usr/bin/zsh
 windows:
-- window_name: logging
+- window_name: journalctl
   layout: main-horizontal
   options:
     remain-on-exit: true
-    automatic-rename: on
-    main-pane-height: 25
+    automatic-rename: off
   panes:
   - shell_command:
-    - journalctl -f
+    - sudo journalctl -f
     focus: true
-  - dmesg -w
   window_index: 1
+- window_name: dmesg
+  layout: main-horizontal
+  options:
+    remain-on-exit: true
+    automatic-rename: off
+  panes:
+  - shell_command:
+    - sudo dmesg -w
+    focus: true
+  window_index: 2
 - window_name: main
   layout: main-horizontal
   options:
     remain-on-exit: true
     automatic-rename: on
-    main-pane-height: 25
   focus: true
   panes:
   - shell_command:
     -
     focus: true
-  - pane
-  window_index: 2
+  window_index: 3
