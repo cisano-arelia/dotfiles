@@ -2,7 +2,7 @@ source /etc/zsh/zshenv
 
 export ZSH="$HOME/.oh-my-zsh"
 
-ZSH_THEME="clean"
+ZSH_THEME="duellj"
 
 COMPLETION_WAITING_DOTS="true"
 
