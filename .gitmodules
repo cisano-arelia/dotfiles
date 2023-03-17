@@ -1,6 +1,6 @@
 [submodule "zsh/.oh-my-zsh/custom/plugins/zsh-aliases-exa"]
 	path = zsh/.oh-my-zsh/custom/plugins/zsh-aliases-exa
-	url = git@github.com:DarrinTisdale/zsh-aliases-exa.git
+	url = https://github.com/tmux-plugins/tpm.git
 [submodule "tmux/.tmux/plugins/tpm"]
 	path = tmux/.tmux/plugins/tpm
-	url = https://github.com/tmux-plugins/tpm
+	url = https://github.com/tmux-plugins/tpm.git
