@@ -7,7 +7,7 @@ then
 
   if [ $? != 0 ]
   then
-    tmuxp load -d $SESSION
+    tmux new -d -s $SESSION
   fi
 
   exec tmux attach-session -t $SESSION
