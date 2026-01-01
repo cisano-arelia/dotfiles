@@ -1,21 +1,12 @@
 [[ $- != *i* ]] && return
 
-export SESSION=main
-if [ -z "$TMUX" ]
-then
-  tmux has-session -t $SESSION 2>/dev/null
+zstyle ':omz:update' mode auto      # update automatically without asking
+zstyle ':omz:update' frequency 13
 
-  if [ $? != 0 ]
-  then
-    tmux new -d -s $SESSION
-  fi
+plugins=(common-aliases aliases alias-finder git zsh-aliases-exa)
 
-  exec tmux attach-session -t $SESSION
-else
-  zstyle ':omz:update' mode auto      # update automatically without asking
-  zstyle ':omz:update' frequency 13
+source $ZSH/oh-my-zsh.sh
 
-  plugins=(common-aliases aliases alias-finder git)
-
-  source $ZSH/oh-my-zsh.sh
+if [ -x /usr/bin/fastfetch ]; then
+   fastfetch
 fi
