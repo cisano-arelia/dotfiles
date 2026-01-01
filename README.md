@@ -6,7 +6,10 @@ Stow repository
 ```
 apt install stow tmux tmuxp zsh python3-pip
 sudo pip install autoenv
+#clone
 cd ~/dotfiles/
+git submodules init
+git submodules update
 stow bashrc
 ```
 
