@@ -25,7 +25,3 @@ eval "$(ssh-agent -s)"
 #  . /home/cisa/.local/lib/python3.9/site-packages/powerline/bindings/bash/powerline.sh
 #fi
 
-# apt install tmux
-#if command -v tmux>/dev/null; then
-#  [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && exec tmux -2 attach-session -t peter
-#fi
